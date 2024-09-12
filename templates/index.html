@@ -20,7 +20,7 @@
 
 <section>
     <h2>Contact</h2>
-    <p>The best to reach me to is to email at <a id="email-anchor"><code id="email-field"></code></a>.</p>
+    <p>The best to reach me to is to email at <a id="email-anchor"></a>.</p>
     <p>I use they/them pronouns and dislike titles. 🏳️‍🌈🏳️‍⚧️</p>
 </section>
 
@@ -41,23 +41,24 @@
     <h2>Socials</h2>
     <p>
         ✍️ blog:
-        <a rel="me" href="ciphertext.blog"><code>ciphertext.blog</code></a>
+        <a rel="me" href="ciphertext.blog">ciphertext.blog</a>
     </p>
     <p>
         🐘 mastodon:
-        <a rel="me" href="https://bratt.ing/@initsecret"><code>@initsecret@bratt.ing</code></a>
+        <a rel="me" href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a>
     </p>
     <p>
         🐘 alt mastodon:
-        <a rel="me" href="https://bratt.ing/@sanketh"><code>@sanketh@bratt.ing</code></a>
+        <a rel="me" href="https://bratt.ing/@sanketh">@sanketh@bratt.ing</a>
     </p>
 </section>
 
 <section>
     <h2>Previously on...</h2>
     <p>Before grad school, I was an undergrad at <a href="https://uwaterloo.ca">UWaterloo</a>, where I spend lots of
-        time at the <a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum Computing</a>,
-        some of it officially, where I drank lots of espresso and learnt a little quantum computing.</p>
+        time at the <a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum
+            Computing</a>—some of it officially—where I drank lots of espresso and learnt a little quantum computing.
+    </p>
 </section>
 
 <script>
@@ -67,9 +68,8 @@
     }
     async function updateEmail() {
         let emailAnchor = document.getElementById("email-anchor");
-        let emailField = document.getElementById("email-field");
 
-        if (emailAnchor && emailField) {
+        if (emailAnchor) {
             let decodedEmail = "************";
 
             for (let i = 0; i < emailASCII.length; i++) {
@@ -77,7 +77,7 @@
                     decodedEmail.substring(0, i) +
                     String.fromCharCode(emailASCII[i]) +
                     decodedEmail.substring(i + 1, decodedEmail.length);
-                emailField.innerText = decodedEmail;
+                emailAnchor.innerText = decodedEmail;
             }
             emailAnchor.href = `mailto:${decodedEmail}`;
         }
