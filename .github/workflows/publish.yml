@@ -15,9 +15,12 @@ concurrency:
 
 jobs:
   build:
-    runs-on: macos
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: brew setup
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
       - name: install zola
         run: brew install zola
       - name: zola build
