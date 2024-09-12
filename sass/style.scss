@@ -1,0 +1,14 @@
+html {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#pfp-img {
+  max-width: 20em;
+}

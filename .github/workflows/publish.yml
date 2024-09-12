@@ -1,0 +1,24 @@
+on: push
+jobs:
+  build:
+    runs-on: macos
+    if: github.ref != 'refs/heads/main'
+    steps:
+      - name: clone repository
+        uses: actions/checkout@v4
+      - name: set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: install zola
+        run: brew install zola
+      - name: zola build
+        run: zola build
+      - name: setup ghpages
+        uses: actions/configure-pages@v3
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'public'
+      - name: deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
