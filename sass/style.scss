@@ -1,3 +1,5 @@
+$color-primary-1: #985EE1;
+
 html {
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
@@ -9,6 +11,26 @@ body {
   justify-content: space-around;
 }
 
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: smaller;
+}
+
 #pfp-img {
   max-width: 20em;
+}
+
+a {
+  color: $color-primary-1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-primary-1;
+  background-color: #581fdb26;
+  border-radius: 4pt;
+}
+
+a:hover > code {
+  background-color: transparent;
 }

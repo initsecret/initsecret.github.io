@@ -21,3 +21,27 @@
   font-style: italic;
   src: url(/3rdparty/atkinson-hyperlegible/Atkinson-Hyperlegible-BoldItalic-102a.woff2);
 }
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/3rdparty/JetBrainsMono/JetBrainsMono-Regular.woff2);
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  src: url(/3rdparty/JetBrainsMono/JetBrainsMono-Italic.woff2);
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  src: url(/3rdparty/JetBrainsMono/JetBrainsMono-Bold.woff2);
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-style: italic;
+  src: url(/3rdparty/JetBrainsMono/JetBrainsMono-BoldItalic.woff2);
+}
