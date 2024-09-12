@@ -1,23 +1,40 @@
-$color-primary-1: #985EE1;
+$color-primary-1: #985ee1;
 
 html {
   font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.4rem;
 }
 
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+main {
+  flex-basis: 30rem;
+  min-width: 0rem;
+}
+
+aside {
+  flex-basis: 20rem;
+  min-width: 0rem;
+}
+
+#pfp-img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  flex-basis: 50rem;
 }
 
 code {
   font-family: "JetBrains Mono", monospace;
   font-size: smaller;
-}
-
-#pfp-img {
-  max-width: 20em;
 }
 
 a {
