@@ -2,29 +2,33 @@
 
 {% block content %}
 
-<main>
-    <h1>sanketh</h1>
-    <p>Hi 👋!!</p>
-    <p>I am a final-year PhD student at <a href="https://tech.cornell.edu/">Cornell Tech</a> where I work on
-        cryptography, advised by the inimitable <a href="https://rist.tech.cornell.edu/">Tom Ristenpart</a>.</p>
-    <p>🚧 This website is under construction 🚧</p>
-</main>
+<div class="main-and-pfp">
+    <main>
+        <h1>sanketh</h1>
+        <p>Hi 👋!!</p>
+        <p>I am a final-year PhD student at <a href="https://tech.cornell.edu/">Cornell Tech</a> where I work on
+            cryptography, advised by the inimitable <a href="https://rist.tech.cornell.edu/">Tom Ristenpart</a>.</p>
+        <p>🚧 This website is under construction 🚧</p>
+    </main>
 
-<aside id="profile-picture">
-    <figure id="pfp-figure">
-        <img id="pfp-img" src="/media/pfp.jpg"
-            alt="Digital painting of a standard headshot showing a person looking at the camera. The person has gray skin, a partly robotic body connected to their head with wires, and is wearing glasses, and looks tired. The background is energy swirls of purple and yellow corresponding to the nonbinary flag." />
-        <figcaption>pfp by <a href="https://astrophysician.tumblr.com">astrophysician</a></figcaption>
-    </figure>
-</aside>
+    <aside id="profile-picture">
+        <figure id="pfp-figure">
+            <img id="pfp-img" src="/media/pfp.jpg"
+                alt="Digital painting of a standard headshot showing a person looking at the camera. The person has gray skin, a partly robotic body connected to their head with wires, and is wearing glasses, and looks tired. The background is energy swirls of purple and yellow corresponding to the nonbinary flag." />
+            <figcaption>pfp by <a href="https://astrophysician.tumblr.com">astrophysician</a></figcaption>
+        </figure>
+    </aside>
+</div>
 
-<section>
-    <h2>Contact</h2>
-    <p>The best way to reach me to is to email at <a id="email-anchor"></a>.</p>
-    <p>I use they/them pronouns and dislike titles. 🏳️‍🌈🏳️‍⚧️</p>
-</section>
+<div class="sections">
 
-<!-- 
+    <section>
+        <h2>Contact</h2>
+        <p>The best way to reach me to is to email at <a id="email-anchor"></a>.</p>
+        <p>I use they/them pronouns and dislike titles. 🏳️‍🌈🏳️‍⚧️</p>
+    </section>
+
+    <!-- 
 <section>
     talks
 
@@ -37,21 +41,24 @@
     (click to see all)
 </section> -->
 
-<section>
-    <h2>Socials</h2>
-    <p>
-        I sometimes write sentences on <a rel="me" href="ciphertext.blog">ciphertext.blog</a>, and other times boost
-        other people's sentences on mastodon <a rel="me" href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a>.
-    </p>
-</section>
+    <section>
+        <h2>Socials</h2>
+        <p>
+            I sometimes write sentences on <a rel="me" href="ciphertext.blog">ciphertext.blog</a>, and other times boost
+            other people's sentences on mastodon <a rel="me"
+                href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a>.
+        </p>
+    </section>
 
-<section>
-    <h2>Previously on...</h2>
-    <p>Before grad school, I was an undergrad at <a href="https://uwaterloo.ca">UWaterloo</a>, where I spend lots of
-        time at the <a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum
-            Computing</a>—some of it officially—where I drank lots of espresso and learnt a little quantum computing.
-    </p>
-</section>
+    <section>
+        <h2>Previously on...</h2>
+        <p>Before grad school, I was an undergrad at <a href="https://uwaterloo.ca">UWaterloo</a>, where I spend lots of
+            time at the <a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum
+                Computing</a>—some of it officially—where I drank lots of espresso and learnt a little quantum
+            computing.
+        </p>
+    </section>
+</div>
 
 <script>
     const emailASCII = [109, 101, 64, 115, 110, 107, 116, 104, 46, 99, 111, 109];
