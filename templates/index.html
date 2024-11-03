@@ -7,7 +7,8 @@
             Hi there! 👋🏽
         </p>
         <p>
-            I'm a cryptographer, currently a final-year PhD student at <a href="https://tech.cornell.edu/">Cornell Tech</a>, advised by the inimitable
+            I'm a cryptographer, currently a final-year PhD student at <a href="https://tech.cornell.edu/">Cornell
+                Tech</a>, advised by the inimitable
             <a href="https://rist.tech.cornell.edu/">Tom Ristenpart</a>.
         </p>
         <p>
@@ -42,24 +43,24 @@
             <br />
             <!-- authors -->
             <span class="paper-authors">
-            {% if post.authors | length == 1 %}
-            {{ post.authors | first }}
-            {% elif post.authors | length == 2 %}
-            {{ post.authors | first }} and {{ post.authors | last }}
-            {% else %}
-            {% for author in post.authors %}
-            {% if loop.last %}
-            and {{ author }}
-            {% else %}
-            {{ author }},
-            {% endif %}
-            {% endfor %}
-            {% endif %}
+                {% if post.authors | length == 1 %}
+                {{ post.authors | first }}
+                {% elif post.authors | length == 2 %}
+                {{ post.authors | first }} and {{ post.authors | last }}
+                {% else %}
+                {% for author in post.authors %}
+                {% if loop.last %}
+                and {{ author }}
+                {% else %}
+                {{ author }},
+                {% endif %}
+                {% endfor %}
+                {% endif %}
             </span>
             <br />
             <!-- venue -->
             <span class="paper-venue">
-            {{ post.extra.venue }}
+                {{ post.extra.venue }}
             </span>
             <!-- doi -->
             {% if post.extra.doi %}
@@ -88,24 +89,24 @@
             <br />
             <!-- authors -->
             <span class="paper-authors">
-            {% if post.authors | length == 1 %}
-            {{ post.authors | first }}
-            {% elif post.authors | length == 2 %}
-            {{ post.authors | first }} and {{ post.authors | last }}
-            {% else %}
-            {% for author in post.authors %}
-            {% if loop.last %}
-            and {{ author }}
-            {% else %}
-            {{ author }},
-            {% endif %}
-            {% endfor %}
-            {% endif %}
+                {% if post.authors | length == 1 %}
+                {{ post.authors | first }}
+                {% elif post.authors | length == 2 %}
+                {{ post.authors | first }} and {{ post.authors | last }}
+                {% else %}
+                {% for author in post.authors %}
+                {% if loop.last %}
+                and {{ author }}
+                {% else %}
+                {{ author }},
+                {% endif %}
+                {% endfor %}
+                {% endif %}
             </span>
             <br />
             <!-- venue -->
             <span class="paper-venue">
-            {{ post.extra.venue }}
+                {{ post.extra.venue }}
             </span>
             <!-- doi -->
             {% if post.extra.doi %}
@@ -126,8 +127,8 @@
 
     <section>
         <h2>mailing list</h2>
-        <p>I promise to not spam you or sell your data, and you can view previous issues <a
-            href="https://ciphertext.blog">here</a>.</p>
+        <p>I am hoping to start using this more, you can view previous issues <a
+                href="https://ciphertext.blog">here</a>.</p>
         <iframe width="100%" height="100rem" frameborder="0" scrolling="no" src="/3rdparty/ghost/minimal.html"></iframe>
     </section>
 
