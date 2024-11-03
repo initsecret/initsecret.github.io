@@ -8,4 +8,5 @@ date = "2024-10-02"
 [extra]
 venue = "Asiacrypt 2024"
 link = "https://eprint.iacr.org/2024/1542"
+eprintlink = "https://eprint.iacr.org/2024/1542"
 +++

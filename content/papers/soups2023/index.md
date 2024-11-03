@@ -7,5 +7,6 @@ date = "2023-08-08"
 [extra]
 venue = "SOUPS 2023"
 link = "https://www.usenix.org/conference/soups2023/presentation/wang"
+publishedlink = "https://www.usenix.org/conference/soups2023/presentation/wang"
 talkvideo = "https://youtu.be/bpvzPeOd_1s"
 +++

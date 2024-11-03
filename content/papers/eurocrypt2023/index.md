@@ -10,6 +10,7 @@ date = "2023-04-26"
 [extra]
 venue = "Eurocrypt 2023"
 link = "https://eprint.iacr.org/2023/526"
+eprintlink = "https://eprint.iacr.org/2023/526"
 doi = "10.1007/978-3-031-30634-1_13"
 talkvideo = "https://youtu.be/FTxSze5TfIo?t=1280"
 +++

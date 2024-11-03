@@ -30,7 +30,7 @@
 <div class="sections">
     <section>
         <h2>Contact</h2>
-        <p>The best way to reach me to is to email at <a id="email-anchor"></a>.</p>
+        <p>The best way to reach me is to email at <a id="email-anchor"></a>.</p>
     </section>
 
     <section>
@@ -108,9 +108,21 @@
             <span class="paper-venue">
                 {{ post.extra.venue }}
             </span>
+            <!-- eprint -->
+            {% if post.extra.eprintlink %}
+            &nbsp; <a href="{{ post.extra.eprintlink }}">[eprint]</a>
+            {% endif %}
+            <!-- arxiv -->
+            {% if post.extra.arxivlink %}
+            &nbsp; <a href="{{ post.extra.arxivlink }}">[arxiv]</a>
+            {% endif %}
             <!-- doi -->
             {% if post.extra.doi %}
-            &nbsp; <a href="https://doi.org/{{ post.extra.doi }}">[doi]</a>
+            &nbsp; <a href="https://doi.org/{{ post.extra.doi }}">[published]</a>
+            {% endif %}
+            <!-- doi -->
+            {% if post.extra.publishedlink %}
+            &nbsp; <a href="{{ post.extra.publishedlink }}">[published]</a>
             {% endif %}
             <!-- talkvideo -->
             {% if post.extra.talkvideo %}
