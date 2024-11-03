@@ -1,7 +1,10 @@
+$text-color: light-dark(#1d1821, #e9e2ef);
+$background-color: light-dark(#fcf9ff, #1d1821);
 $color-primary-1: #985ee1;
 $color-deemph: #888888;
 
-html {
+:root {
+  color-scheme: light dark;
   font-family: "Atkinson Hyperlegible", sans-serif;
   font-size: 1.4rem;
 }
@@ -10,7 +13,9 @@ body {
   padding: 0;
   max-width: 48rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  color: $text-color;
+  background-color: $background-color;
 }
 
 .main-and-pfp {
