@@ -23,6 +23,19 @@
 }
 
 @font-face {
+  font-family: "Mulish";
+  font-weight: 200 1000;
+  src: url(/3rdparty/Mulish/Mulish-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-weight: 200 1000;
+  font-style: italic;
+  src: url(/3rdparty/Mulish/Mulish-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
   font-family: "JetBrains Mono";
   src: url(/3rdparty/JetBrainsMono/JetBrainsMono-Regular.woff2);
 }
