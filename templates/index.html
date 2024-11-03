@@ -1,64 +1,176 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div class="main-and-pfp">
     <main>
         <h1>sanketh</h1>
-        <p>Hi 👋!!</p>
-        <p>I am a final-year PhD student at <a href="https://tech.cornell.edu/">Cornell Tech</a> where I work on
-            cryptography, advised by the inimitable <a href="https://rist.tech.cornell.edu/">Tom Ristenpart</a>.</p>
-        <p>🚧 This website is under construction 🚧</p>
+        <p>
+            Hi there! 👋🏽
+        </p>
+        <p>
+            I'm a cryptographer, and I'm currently a PhD student at <a href="https://tech.cornell.edu/">Cornell Tech</a>
+            working on
+            cryptography, advised by the inimitable
+            <a href="https://rist.tech.cornell.edu/">Tom Ristenpart</a>.
+        </p>
+        <p>
+            I use they/them pronouns and dislike titles. 🏳️‍🌈🏳️‍⚧️
+        </p>
     </main>
 
     <aside id="profile-picture">
         <figure id="pfp-figure">
             <img id="pfp-img" src="/media/pfp.jpg"
-                alt="Digital painting of a standard headshot showing a person looking at the camera. The person has gray skin, a partly robotic body connected to their head with wires, and is wearing glasses, and looks tired. The background is energy swirls of purple and yellow corresponding to the nonbinary flag." />
-            <figcaption>pfp by <a href="https://astrophysician.tumblr.com">astrophysician</a></figcaption>
+                alt="Digital painting of a headshot of a robotgirl looking away from the camera. The robotgirl is human-shaped, has a human-like head with gray skin, a robotic body connected to the head with wires, and is wearing glasses. The background is energy swirls of purple and yellow corresponding to the nonbinary flag." />
+            <figcaption>
+                pfp by <a href="https://astrophysician.tumblr.com">astrophysician</a>
+            </figcaption>
         </figure>
     </aside>
 </div>
 
 <div class="sections">
-
     <section>
         <h2>Contact</h2>
         <p>The best way to reach me to is to email at <a id="email-anchor"></a>.</p>
-        <p>I use they/them pronouns and dislike titles. 🏳️‍🌈🏳️‍⚧️</p>
     </section>
 
-    <!-- 
-<section>
-    talks
+    <section>
+        <h2>Talks</h2>
+        {% set talks = get_section(path="talks/_index.md") %}
+        {% for post in talks.pages %}
+        {% if post.extra.link %}
+        <p>
+            <a class="paper-title" href="{{ post.extra.link }}">{{ post.title }}</a>
+            <br />
+            <!-- authors -->
+            <span class="paper-authors">
+            {% if post.authors | length == 1 %}
+            {{ post.authors | first }}
+            {% elif post.authors | length == 2 %}
+            {{ post.authors | first }} and {{ post.authors | last }}
+            {% else %}
+            {% for author in post.authors %}
+            {% if loop.last %}
+            and {{ author }}
+            {% else %}
+            {{ author }},
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            </span>
+            <br />
+            <!-- venue -->
+            <span class="paper-venue">
+            {{ post.extra.venue }}
+            </span>
+            <!-- doi -->
+            {% if post.extra.doi %}
+            &nbsp; <a href="https://doi.org/{{ post.extra.doi }}">[doi]</a>
+            {% endif %}
+            <!-- talkvideo -->
+            {% if post.extra.talkvideo %}
+            &nbsp; <a href="{{ post.extra.talkvideo }}">[video]</a>
+            {% endif %}
+            <!-- talkslides -->
+            {% if post.extra.talkslides %}
+            &nbsp; <a href="{{ post.extra.talkslides }}">[slides]</a>
+            {% endif %}
+        </p>
+        {% endif %}
+        {% endfor %}
+    </section>
 
-    (click to see all)
-</section>
+    <section>
+        <h2>Papers</h2>
+        {% set papers = get_section(path="papers/_index.md") %}
+        {% for post in papers.pages %}
+        {% if post.extra.link %}
+        <p>
+            <a class="paper-title" href="{{ post.extra.link }}">{{ post.title }}</a>
+            <br />
+            <!-- authors -->
+            <span class="paper-authors">
+            {% if post.authors | length == 1 %}
+            {{ post.authors | first }}
+            {% elif post.authors | length == 2 %}
+            {{ post.authors | first }} and {{ post.authors | last }}
+            {% else %}
+            {% for author in post.authors %}
+            {% if loop.last %}
+            and {{ author }}
+            {% else %}
+            {{ author }},
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            </span>
+            <br />
+            <!-- venue -->
+            <span class="paper-venue">
+            {{ post.extra.venue }}
+            </span>
+            <!-- doi -->
+            {% if post.extra.doi %}
+            &nbsp; <a href="https://doi.org/{{ post.extra.doi }}">[doi]</a>
+            {% endif %}
+            <!-- talkvideo -->
+            {% if post.extra.talkvideo %}
+            &nbsp; <a href="{{ post.extra.talkvideo }}">[talk video]</a>
+            {% endif %}
+            <!-- talkslides -->
+            {% if post.extra.talkslides %}
+            &nbsp; <a href="{{ post.extra.talkslides }}">[talk slides]</a>
+            {% endif %}
+        </p>
+        {% endif %}
+        {% endfor %}
+    </section>
 
-<section>
-    papers
-
-    (click to see all)
-</section> -->
+    <section>
+        <h2>mailing list</h2>
+        <p>I promise to not spam you or sell your data, and you can view previous issues <a
+            href="https://ciphertext.blog">here</a>.</p>
+        <iframe width="100%" height="100rem" frameborder="0" scrolling="no" src="/3rdparty/ghost/minimal.html"></iframe>
+    </section>
 
     <section>
         <h2>Socials</h2>
         <p>
-            I sometimes write sentences on <a rel="me" href="ciphertext.blog">ciphertext.blog</a>, and other times boost
-            other people's sentences on mastodon <a rel="me"
-                href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a> and <a rel="me"
-                href="https://bratt.ing/@sanketh">@sanketh@bratt.ing</a>.
+            I am @initsecret
+            <a rel="me" href="https://github.com/initsecret">Github</a> and
+            <a rel="me" href="https://linkedin.com/in/initsecret">LinkedIn</a>.
+        </p>
+        <p>
+            On the fediverse, I am
+            <a rel="me" href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a>,
+            <a rel="me" href="https://bratt.ing/@sanketh">@sanketh@bratt.ing</a>, and
+            <a rel="me" href="https://threads.net/@initsecret">@initsecret@threads.net</a>.
+        </p>
+        <p>
+            On bluesky, I am
+            <a rel="me" href="https://bsky.app/profile/sanketh.bsky.social">@sanketh.bsky.social</a>.
         </p>
     </section>
 
     <section>
         <h2>Previously on...</h2>
-        <p>Before grad school, I was an undergrad at <a href="https://uwaterloo.ca">UWaterloo</a>, where I spent lots of
-            time at the <a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum
-                Computing</a>—some of it officially—where I drank lots of espresso and learnt a little quantum
-            computing.
+        <p>
+            Before grad school, I was an undergrad at the
+            <a href="https://uwaterloo.ca">University of Waterloo</a>, where I spent
+            lots of time at the
+            <a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum Computing</a>—some of
+            it officially—where I drank lots of espresso and learnt a little
+            quantum computing.
         </p>
     </section>
+
+    <footer>
+        <strong>Obvious Disclaimer.</strong> Everything I say on the
+        internet, unless explicitly marked otherwise, is my personal view and may
+        not be shared by entities I am currently or was previously affiliated
+        with.
+    </footer>
+
 </div>
 
 <script>

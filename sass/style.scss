@@ -1,4 +1,5 @@
 $color-primary-1: #985ee1;
+$color-deemph: #888888;
 
 html {
   font-family: "Atkinson Hyperlegible", sans-serif;
@@ -6,73 +7,15 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.sections {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 0;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .main-and-pfp {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-@media (max-width: 70rem) {
-  .sections {
-    flex-direction: column;
-    max-width: 50rem;
-  }
-
-  .main-and-pfp {
-    flex-direction: row;
-  }
-
-  main {
-    min-width: 0rem;
-    max-width: 30rem;
-  }
-
-  section {
-    min-width: 0rem;
-    max-width: 30rem;
-  }
-
-  aside {
-    min-width: 0rem;
-    max-width: 30rem;
-  }
-}
-
-@media (min-width: 70rem) {
-  .main-and-pfp {
-    flex-direction: row;
-  }
-
-  .sections {
-    flex-direction: column;
-    max-width: 50rem;
-  }
-
-  main {
-    flex-basis: 30rem;
-    min-width: 0rem;
-  }
-
-  section {
-    min-width: 0rem;
-  }
-
-  aside {
-    flex-basis: 20rem;
-    min-width: 0rem;
-  }
+  align-items: flex-start;
 }
 
 #pfp-img {
@@ -80,11 +23,6 @@ body {
   max-height: 20rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-code {
-  font-family: "JetBrains Mono", monospace;
-  font-size: smaller;
 }
 
 a {
@@ -98,6 +36,27 @@ a:hover {
   border-radius: 4pt;
 }
 
-a:hover > code {
+a:hover>code {
   background-color: transparent;
+}
+
+h2 {
+  text-transform: lowercase;
+}
+
+footer {
+  font-size: smaller;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  color: $color-deemph;
+}
+
+.paper-venue {
+  color: $color-deemph;
+}
+
+.paper-title {
+}
+
+.paper-authors {
 }
