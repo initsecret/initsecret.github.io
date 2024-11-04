@@ -6,16 +6,18 @@ $color-deemph: #888888;
 :root {
   color-scheme: light dark;
   font-family: "Atkinson Hyperlegible", "Mulish", sans-serif;
-  font-size: 1.4rem;
 }
 
 body {
+  font-size: 1.4rem;
   padding: 0;
   max-width: 48rem;
   margin: 0 auto;
   padding: 0 2rem;
   color: $text-color;
   background-color: $background-color;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
 
 h1 {
