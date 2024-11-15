@@ -1,11 +1,11 @@
-$text-color: light-dark(#1d1821, #e9e2ef);
-$background-color: light-dark(#fcf9ff, #1d1821);
+$text-color: light-dark(#1d1821, #dedede);
+$background-color: light-dark(#fcf9ff, #24272E);
 $color-primary-1: #985ee1;
 $color-deemph: #888888;
 
 :root {
   color-scheme: light dark;
-  font-family: "Atkinson Hyperlegible", "Mulish", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 body {
@@ -47,6 +47,12 @@ h2 {
   max-height: 12rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+#pfp-caption {
+  padding-top: 0.2rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 a {
