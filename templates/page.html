@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    {{ page.title }}
+</h1>
+{% if page.extra.link %}
+<p>
+    <!-- authors -->
+    <span class="paper-authors">
+        {% if page.authors | length == 1 %}
+        {{ page.authors | first }}
+        {% elif page.authors | length == 2 %}
+        {{ page.authors | first }} and {{ page.authors | last }}
+        {% else %}
+        {% for author in page.authors %}
+        {% if loop.last %}
+        and {{ author }}
+        {% else %}
+        {{ author }},
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </span>
+    <br />
+    <!-- venue -->
+    <span class="paper-venue">
+        {{ page.extra.venue }}
+    </span>
+    <!-- doi -->
+    {% if page.extra.doi %}
+    &nbsp; <a href="https://doi.org/{{ page.extra.doi }}">[doi]</a>
+    {% endif %}
+    <!-- eprint -->
+    {% if page.extra.eprintlink %}
+    &nbsp; <a href="{{ page.extra.eprintlink }}">[eprint]</a>
+    {% endif %}
+    <!-- arxiv -->
+    {% if page.extra.arxivlink %}
+    &nbsp; <a href="{{ page.extra.arxivlink }}">[arxiv]</a>
+    {% endif %}
+    <!-- doi -->
+    {% if page.extra.doi %}
+    &nbsp; <a href="https://doi.org/{{ page.extra.doi }}">[published]</a>
+    {% endif %}
+    <!-- doi -->
+    {% if page.extra.publishedlink %}
+    &nbsp; <a href="{{ page.extra.publishedlink }}">[published]</a>
+    {% endif %}
+    <!-- talkvideo -->
+    {% if page.extra.talkvideo %}
+    &nbsp; <a href="{{ page.extra.talkvideo }}">[video]</a>
+    {% endif %}
+    <!-- talkslides -->
+    {% if page.extra.talkslides %}
+    &nbsp; <a href="{{ page.extra.talkslides }}">[slides]</a>
+    {% endif %}
+</p>
+{% endif %}
+
+{{ page.content | safe }}
+
+{% endblock content %}
