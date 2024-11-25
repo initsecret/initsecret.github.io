@@ -59,6 +59,10 @@
     {% if page.extra.extendedabstract %}
     &nbsp; <a href="{{ page.extra.extendedabstract }}">[extended abstract]</a>
     {% endif %}
+    <!-- auxtalkvideo -->
+    {% if post.extra.auxtalkvideo %}
+    &nbsp; <a href="{{ post.extra.auxtalkvideo }}">[{{ post.extra.auxtalktext }} talk video]</a>
+    {% endif %}
 </p>
 {% endif %}
 
