@@ -9,6 +9,8 @@ date = "2024-10-02"
 venue = "Asiacrypt 2024"
 link = "https://eprint.iacr.org/2024/1542"
 eprintlink = "https://eprint.iacr.org/2024/1542"
+doi = "10.1007/978-981-96-0947-5_11"
+talkvideo = "https://youtu.be/LpJtHRxgFBw?t=1421"
 +++
 
 There has been a recent interest to develop and standardize Robust Authenticated Encryption (Robust AE) schemes. NIST, for example, is considering an Accordion mode (a wideblock tweakable blockcipher), with Robust AE as a primary application. On the other hand, recent attacks and applications suggest that encryption needs to be committing. Indeed, committing security isalso a design consideration in the Accordion mode. Yet it is unclear how to build a Robust AE with committing security.
