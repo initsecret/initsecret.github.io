@@ -74,6 +74,10 @@
             {% if post.extra.talkslides %}
             &nbsp; <a href="{{ post.extra.talkslides }}">[slides]</a>
             {% endif %}
+            <!-- abstract -->
+            {% if post.extra.abstract %}
+            &nbsp; <a href="{{ post.extra.abstract }}">[abstract]</a>
+            {% endif %}
         </p>
         {% endif %}
         {% endfor %}
@@ -153,20 +157,11 @@
     <section>
         <h2>Socials</h2>
         <p>
-            I am @initsecret on
-            <a rel="me" href="https://github.com/initsecret">GitHub</a> and
-            <a rel="me" href="https://linkedin.com/in/initsecret">LinkedIn</a>.
-        </p>
-        <p>
-            On the Fediverse, I am
-            <a rel="me" href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a>,
-            <a rel="me" href="https://bratt.ing/@sanketh">@sanketh@bratt.ing</a>,
-            and
-            <a rel="me" href="https://threads.net/@initsecret">@initsecret@threads.net</a>.
-        </p>
-        <p>
-            On Bluesky, I am
-            <a rel="me" href="https://bsky.app/profile/sanketh.bsky.social">@sanketh.bsky.social</a>.
+            I am
+            <a rel="me" href="https://github.com/initsecret">@initsecret</a> on Github,
+            <a rel="me" href="https://linkedin.com/in/initsecret">@initsecret</a> on LinkedIn,
+            <a rel="me" href="https://bratt.ing/@initsecret">@initsecret@bratt.ing</a> on the Fediverse, and
+            <a rel="me" href="https://bsky.app/profile/sanketh.bsky.social">@sanketh.bsky.social</a> on Bluesky.
         </p>
     </section>
 
